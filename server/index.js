@@ -14,3 +14,5 @@ massive(CONNECTION_STRING).then(db => {
 app.use(express.json())
 
 app.get('/api/houses', HouseCtrl.getHouses)
+app.post('/api/house', HouseCtrl.addHouse)
+app.delete('/api/house/:id', HouseCtrl.deleteHouse)
